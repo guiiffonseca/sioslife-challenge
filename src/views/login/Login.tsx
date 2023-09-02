@@ -5,10 +5,13 @@ import {Row} from '../../components/Row';
 import {Title} from '../../components/Title';
 import LoginForm from './components/LoginForm';
 import {Subtitle} from '../../components/Subtitle';
+import useLogin from '../../hooks/UseLogin';
 
 export default function Login(): JSX.Element {
+  const {login} = useLogin();
+
   async function onSubmitLoginForm(values: LoginModel) {
-    console.log(values);
+    await login(values.email, values.password);
   }
   return (
     <Container>

@@ -1,11 +1,18 @@
 import React from 'react';
-import {Text, StatusBar} from 'react-native';
+import {Container} from '../../components/containers/Container';
+import {Row} from '../../components/Row';
+import {Title} from '../../components/Title';
+import {Subtitle} from '../../components/Subtitle';
+import LoginForm from './components/LoginForm';
 
 export default function Login(): JSX.Element {
   return (
-    <>
-      <StatusBar barStyle={'light-content'} backgroundColor="#0cc0df" />
-      <Text style={{fontSize: 30, fontFamily: 'Manrope-Light'}}>Login</Text>
-    </>
+    <Container>
+      <Row style={{marginBottom: 15}}>
+        <Title>Login</Title>
+      </Row>
+      <Subtitle>Please login to you account</Subtitle>
+      <LoginForm />
+    </Container>
   );
 }

@@ -1,3 +1,11 @@
+## Body request
+
+**email** - admin@admin.com
+
+**password** - Admin1234
+
+---
+
 ## Libraries
 
 **react-native-splash-screen** - https://github.com/crazycodeboy/react-native-splash-screen

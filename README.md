@@ -1,3 +1,9 @@
+## Login resquest
+
+**email** - admin@admin.com
+
+**password** - Admin124
+
 ## Libraries
 
 **react-native-splash-screen** - https://github.com/crazycodeboy/react-native-splash-screen

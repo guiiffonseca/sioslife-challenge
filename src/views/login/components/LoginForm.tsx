@@ -2,26 +2,30 @@ import React from 'react';
 import {Formik} from 'formik';
 import {Login} from '../../../model/Login';
 import {View} from 'react-native';
-import Username from '../../../components/inputs/Username';
+import Email from '../../../components/inputs/Email';
 import Password from '../../../components/inputs/Password';
 import SubmitButton from '../../../components/buttons/SumitButton';
 
-export default function LoginForm() {
-  const INITIAL_VALUES = {username: '', password: ''} as Login;
+interface Props {
+  onSubmit: (values: Login) => void;
+}
+
+export default function LoginForm({onSubmit}: Props) {
+  const INITIAL_VALUES = {email: '', password: ''} as Login;
 
   return (
     <Formik
       initialValues={INITIAL_VALUES}
-      onSubmit={() => console.log('FORMIK')}>
-      {({values, handleChange, handleSubmit, setFieldValue}) => (
+      onSubmit={(values: Login) => onSubmit(values)}>
+      {({values, handleSubmit, setFieldValue}) => (
         <View style={{marginTop: 20}}>
-          <Username
-            value={values.username}
-            onChangeText={(e: string) => setFieldValue('username', e)}
+          <Email
+            value={values.email}
+            onChangeText={(e: string) => setFieldValue('email', e)}
           />
           <Password
             value={values.password}
-            onChangeText={handleChange('password')}
+            onChangeText={(e: string) => setFieldValue('password', e)}
           />
           <View style={{marginTop: 30}}>
             <SubmitButton text="LOGIN" onPress={handleSubmit} />
@@ -29,6 +33,5 @@ export default function LoginForm() {
         </View>
       )}
     </Formik>
-    // <SubmitButton text="LOGIN" onPress={() => console.log('deudeu')} />
   );
 }

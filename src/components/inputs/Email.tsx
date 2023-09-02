@@ -7,24 +7,30 @@ import {FieldProps} from '../../model/FieldProps';
 
 interface Props {
   value: string;
-  onChangeText: (username: string) => void;
+  onChangeText: (email: string) => void;
 }
 
-export default function Username({value, onChangeText}: Props) {
-  function validateUsername(value: string) {
+export default function Email({value, onChangeText}: Props) {
+  function validateEmail(emailValue: string) {
+    const REGEX = /\S+@\S+\.\S+/;
     let error: string = '';
 
-    if (!value) error = 'Username is required';
+    if (!REGEX.test(emailValue)) {
+      return (error = 'Invalid email');
+    }
+    if (!emailValue) {
+      return (error = 'Email is required');
+    }
 
     return error;
   }
   return (
-    <Field validate={validateUsername} name="username">
+    <Field validate={validateEmail} name="email">
       {({meta}: FieldProps) => (
         <ContainerInput>
           <Input
-            id="username"
-            placeholder="Username"
+            id="email"
+            placeholder="Email"
             value={value}
             active={value}
             error={meta.error}

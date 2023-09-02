@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Platform, StatusBar} from 'react-native';
+import {Platform} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import Router from './src/routes/Router';
 
@@ -12,7 +12,6 @@ function App(): JSX.Element {
 
   return (
     <>
-      <StatusBar barStyle={'light-content'} backgroundColor="#0cc0df" />
       <Router />
     </>
   );

@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function Email({value, onChangeText}: Props) {
-  function validateUsername(emailValue: string) {
+  function validateEmail(emailValue: string) {
     const REGEX = /\S+@\S+\.\S+/;
     let error: string = '';
 
@@ -25,7 +25,7 @@ export default function Email({value, onChangeText}: Props) {
     return error;
   }
   return (
-    <Field validate={validateUsername} name="email">
+    <Field validate={validateEmail} name="email">
       {({meta}: FieldProps) => (
         <ContainerInput>
           <Input

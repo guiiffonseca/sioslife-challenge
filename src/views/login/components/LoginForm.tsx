@@ -6,13 +6,17 @@ import Email from '../../../components/inputs/Email';
 import Password from '../../../components/inputs/Password';
 import SubmitButton from '../../../components/buttons/SumitButton';
 
-export default function LoginForm() {
+interface Props {
+  onSubmit: (values: Login) => void;
+}
+
+export default function LoginForm({onSubmit}: Props) {
   const INITIAL_VALUES = {email: '', password: ''} as Login;
 
   return (
     <Formik
       initialValues={INITIAL_VALUES}
-      onSubmit={() => console.log('FORMIK')}>
+      onSubmit={(values: Login) => onSubmit(values)}>
       {({values, handleSubmit, setFieldValue}) => (
         <View style={{marginTop: 20}}>
           <Email

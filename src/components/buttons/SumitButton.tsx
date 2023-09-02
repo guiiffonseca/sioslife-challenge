@@ -3,7 +3,7 @@ import {LableBtn, SubmitBtn} from './styles';
 
 type Props = {
   text: string;
-  onPress?: () => void;
+  onPress: () => void;
 };
 
 export default function SubmitButton({onPress, text}: Props) {

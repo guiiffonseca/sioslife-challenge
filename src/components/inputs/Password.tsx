@@ -11,10 +11,10 @@ interface Props {
 }
 
 export default function Password({value, onChangeText}: Props): JSX.Element {
-  function validatePassword(value: string) {
+  function validatePassword(password: string) {
     let error: string = '';
 
-    if (!value) {
+    if (!password) {
       return (error = 'Password is required');
     }
 

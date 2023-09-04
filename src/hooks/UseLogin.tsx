@@ -6,9 +6,13 @@ export default function useLogin() {
   async function login(email: string, password: string) {
     try {
       const data = await signInWithEmailAndPassword(auth, email, password);
-      AlertMessage('You are logged!', `You're user ID is ${data.user.uid}`);
+      AlertMessage('You are logged!', `Your user ID is ${data.user.uid}`);
+      console.log(data);
     } catch (error) {
-      AlertMessage('Error', 'Wrong email address or password');
+      AlertMessage(
+        'Ops!',
+        'Something went wrong. Please, check your email address and your password',
+      );
     }
   }
   return {login};

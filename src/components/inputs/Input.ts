@@ -3,7 +3,7 @@ import {TextInput} from 'react-native';
 
 type InputProps = {
   active?: string;
-  error?: string;
+  error?: string | boolean;
 };
 
 export const Input = styled(TextInput)<InputProps>`

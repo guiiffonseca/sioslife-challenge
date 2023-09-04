@@ -33,7 +33,7 @@ export default function Email({value, onChangeText}: Props) {
             placeholder="Email"
             value={value}
             active={value}
-            error={meta.error}
+            error={meta.error && meta.touched}
             onChangeText={onChangeText}
           />
           {meta.error && meta.touched && (

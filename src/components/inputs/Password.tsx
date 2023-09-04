@@ -28,7 +28,7 @@ export default function Password({value, onChangeText}: Props) {
             onChangeText={onChangeText}
             secureTextEntry={true}
             active={value}
-            error={meta.error}
+            error={meta.error && meta.touched}
           />
           {meta.error && meta.touched && (
             <ErrorMessage>{meta.error}</ErrorMessage>

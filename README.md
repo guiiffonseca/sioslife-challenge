@@ -1,6 +1,6 @@
 # Welcome to Sioslife Challenge repository
 
-This project was made to run on **android emulator**.
+This project was made to run in **android emulator**.
 
 ## Instructions
 

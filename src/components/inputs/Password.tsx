@@ -10,11 +10,13 @@ interface Props {
   onChangeText: (password: string) => void;
 }
 
-export default function Password({value, onChangeText}: Props) {
+export default function Password({value, onChangeText}: Props): JSX.Element {
   function validatePassword(value: string) {
     let error: string = '';
 
-    if (!value) error = 'Password is required';
+    if (!value) {
+      return (error = 'Password is required');
+    }
 
     return error;
   }

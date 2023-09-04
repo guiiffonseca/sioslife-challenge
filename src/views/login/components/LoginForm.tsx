@@ -10,7 +10,7 @@ interface Props {
   onSubmit: (values: Login) => void;
 }
 
-export default function LoginForm({onSubmit}: Props) {
+export default function LoginForm({onSubmit}: Props): JSX.Element {
   const INITIAL_VALUES = {email: '', password: ''} as Login;
 
   return (

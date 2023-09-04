@@ -10,7 +10,7 @@ interface Props {
   onChangeText: (email: string) => void;
 }
 
-export default function Email({value, onChangeText}: Props) {
+export default function Email({value, onChangeText}: Props): JSX.Element {
   function validateEmail(emailValue: string) {
     const REGEX = /\S+@\S+\.\S+/;
     let error: string = '';

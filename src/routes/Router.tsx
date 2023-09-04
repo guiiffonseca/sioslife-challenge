@@ -6,7 +6,7 @@ import Home from '../views/home/Home';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
-export default function Router() {
+export default function Router(): JSX.Element {
   return (
     <NavigationContainer>
       <Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>

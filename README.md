@@ -1,8 +1,28 @@
+# Welcome to Sioslife Challenge repository
+
+This project was made to run on **android emulator**.
+
+## Instructions
+
+**step 01** clone this project
+
+**step 02** run in your terminal 
+```yarn install``` 
+
+**step 03** run  in your terminal 
+```yarn run android```
+
+After running tha project in your Android emulator device you can try to do the **Login**
+
+If the request is successful then the user will be redirected to **Home** screen. Otherwise, an alert will show up.
+
+
 ## Login resquest
 
 **email** - admin@admin.com
 
 **password** - Admin124
+
 
 ## Libraries
 

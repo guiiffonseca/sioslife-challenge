@@ -7,7 +7,7 @@ This project was made to run in **android emulator**.
 **step 01** clone this project
 
 **step 02** run in your terminal 
-```yarn install``` 
+```yarn install``` or ```npm install```
 
 **step 03** run  in your terminal 
 ```yarn run android```
